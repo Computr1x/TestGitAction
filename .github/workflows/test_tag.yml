@@ -24,3 +24,4 @@ jobs:
           title: "Release v${{ VERSION }}"
           files: |
             test
+            *.txt
