@@ -21,6 +21,6 @@ jobs:
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          title: "Release ${{ GITHUB_REF_NAME }}"
+          title: "Release ${{ GITHUB_REF_NAME#v }}"
           files: |
             test
