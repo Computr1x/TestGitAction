@@ -23,11 +23,6 @@ jobs:
         run: |
           echo Version now: ${VERSION}
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: ncipollo/release-action@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          title: "Release v${{ env.VERSION }}"
-          prerelease: false
-          files: |
-            test
-            *.txt
+          artifacts: "test,*.txt,folder/*.dll"
